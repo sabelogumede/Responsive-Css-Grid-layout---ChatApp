@@ -1,0 +1,45 @@
+.app-message {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto;
+}
+
+.app-chat-header {
+  background-color: silver;
+  height: 3rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+/*Small Screen*/
+@media only screen and (max-width: 900px) {
+  .app-chats {
+    display: none;
+  }
+
+}
+
+/*Big Screen*/
+@media only screen and (min-width: 901px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+  }
+
+  .app-contacts {
+    border-right: solid 1px silver;
+    height: 100vh;
+  }
+
+  .app-chats,
+  .app-contacts {
+     height: 100vh;
+     overflow: scroll;
+  }
+
+  .app-message-active {
+    background-color: silver;
+  }
+}
